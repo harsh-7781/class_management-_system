@@ -1,7 +1,12 @@
 async function main (req,res){
   
     const student_id = req.params.student_id;
-    const student_name = req.body.student_name;
+    const student_name = req.body.name;
+
+    console.log("id",student_id);
+    console.log("name",student_name);
+    
+    
    
        const {getPGConnection} = require("../base/pg_connector")
        const client =await getPGConnection();
